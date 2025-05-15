@@ -1,0 +1,450 @@
+:root {
+    --base-color: rgb(114, 123, 189);
+    --navbar-color: rgb(28, 30, 46);
+}
+
+body {
+    margin: 0;
+    background-image: url("https://img.freepik.com/free-vector/circles-background-dark-tones_60389-166.jpg");
+    color: white;
+    font-family: "Arial";
+    background-size: 100vw 100vh;
+    text-align: justify;
+}
+
+footer {
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 7vh;
+    font-weight: bold;
+    font-size: 20px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-top-width: 1px;
+}
+
+body>hr {
+    width: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--navbar-color);
+    color: var(--navbar-color);
+    background-color: var(--navbar-color);
+    border-style: solid;
+    border-top-color: white;
+    border-top-width: 1px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 82vh;
+    margin-top: 80px;
+}
+
+h1, h2 {
+    padding-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(114, 123, 189);
+}
+
+h2 {
+    color: rgb(114, 123, 189);
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+fieldset {
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(114, 123, 189);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset legend {
+    color: rgb(162, 170, 234);
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+aside {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navbar-color);
+    box-shadow: 0 0 20px 1px black;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+aside a{
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.15s, color 0.15s;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside a:hover {
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(129, 141, 221);
+}
+
+a:visited {
+    color: rgb(184, 191, 236);
+}
+
+b {
+    color: rgb(152, 163, 252);
+}
+
+.info-container input {
+    margin-top: 4px;
+    margin-bottom: 15px;
+    width: 200px;
+}
+
+.info-container input[type='submit'], .info-container input[type='checkbox']{
+    width: 5%;
+    float: left;
+}
+
+.info-container input[type='checkbox'] {
+    accent-color: green;
+    color: black;
+}
+
+.info-container h2::first-letter {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.info-container input[type='submit'] {
+    width: 40%;
+    padding: 9px 15px 9px 15px;
+    color: white;
+    background-color: var(--base-color);
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.info-container input[type='submit']:hover {
+    opacity: 0.7;
+}
+
+.info-container fieldset textarea {
+    width: 100%;
+}
+
+.info-container select {
+    margin-top: 4px;
+    margin-bottom: 15px;
+    border: none;
+    width: 30%;
+}
+
+.info-container input, .info-container textarea {
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.info-container label, .info-container select {
+    font-weight: bold;
+}
+
+.info-container input[type='range'] {
+    accent-color: green;
+}
+
+.info-container input:focus {
+    outline: none;
+}
+
+.info-container {
+    background-color: rgb(28, 30, 46);
+    margin: 70px 10px 80px 10px;
+    padding: 15px 30px 20px 30px;
+    border-radius: 35px;
+    width: 75vw;
+    box-shadow: 0 0 20px 1px black;
+}
+
+nav {
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-weight: bold;
+    position: fixed;
+    z-index: 999;
+
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav img {
+    filter: invert(100%);
+}
+
+nav a {
+    transition: 0.3s;
+    padding: 15px 20px 15px 20px;
+}
+
+nav a:hover {
+    background-color: rgb(129, 141, 221);
+    color: rgb(28, 30, 46);
+    transition: 0.3s;
+}
+
+nav a:active {
+    background-color: rgb(94, 104, 165);
+}
+
+table th, table td, table{
+    border: 4px solid rgb(90, 86, 209);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+table {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+table th {
+    color: rgb(148, 146, 230);
+}
+
+table td {
+    color: white;
+    padding: 9px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.table-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+form select {
+    background-color: white;
+    color: rgb(72, 72, 72);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.video-grid {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 25px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.cube-gif {
+    position: fixed;
+    right: 25px;
+    top: 50px;
+    width: 100px;
+}
+
+.show-menu img {
+    display:none;
+}
+
+.butonf {
+    background-color: var(--base-color);
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.rotating-rect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.5s;
+}
+
+.cube-picture-shop {
+    width: 50px;
+}
+
+.index-photo {
+    border-radius: 25px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(197, 197, 197);
+    box-shadow: 0 0 10px 3px white;
+    transition: transform 1s;
+    margin-bottom: 10px;
+}
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(28, 30, 46, 0.8);
+}
+
+.index-photo:hover {
+    transform: rotateY(360deg)
+}
+
+.submit-button-despre {
+    display: block;
+}
+
+.rotating-rect:hover {
+    transform: rotate(360deg);
+}
+
+.iframe-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes color-change {
+    from {background-color: aliceblue;}
+    to {background-color: aqua;}
+}
+
+.color-change-rect {
+    width:200px;
+    height: 200px;
+    background-color: purple;
+    animation-name: color-change;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+@media screen and (max-width: 1050px) {
+    .video-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px;
+    }
+   
+}
+@media screen and (max-width: 718px) {
+
+    nav {
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border: none;
+        justify-content: left;
+        align-items: start;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 12px;
+        width: 15vw;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 8px;
+    }
+
+    .show-menu {
+        display: inline;
+    }
+
+    .show-menu:hover ~ nav {
+        display: flex;
+    }
+
+    nav:hover{
+        display: flex;
+    }
+
+    .show-menu img {
+        position: fixed;
+        display: inline;
+        width: 40px;
+        height: 40px;
+        margin-left: 80px;
+        filter: invert();
+    }
+}

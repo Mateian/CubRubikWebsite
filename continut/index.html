@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/stil.css">
+        <title>Cubul Rubik</title>
+        <link rel="icon" type="image/x-icon" href="imagini/cube-solving.gif">
+        <script>
+            // function schimbaContinut2(resursa) {
+            //     if(window.intervalDate) {
+            //         clearInterval(window.intervalDate);
+            //         window.intervalDate = null;
+            //     }
+            //     window.addEventListener("beforeunload", () => {
+            //         clearInterval(window.intervalDate);
+            //     });
+            //     var xhttp = new XMLHttpRequest();
+            //     xhttp.onreadystatechange = function() {
+            //         if(this.readyState == 4 && this.status == 200) {
+            //             document.getElementById("continut").innerHTML = this.responseText;
+            //             if(resursa === "inregistrare") {
+            //                 initForm();
+            //             }
+            //         }
+            //     }
+                
+            //     let resursa_html = resursa + '.html';
+            //     xhttp.open("GET", resursa_html, true);
+            //     xhttp.send();
+            // }
+
+            // function schimbaContinut(resursa, jsFisier, jsFunctie) {
+            //     if(window.intervalDate) {
+            //         clearInterval(window.intervalDate);
+            //         console.log(window.intervalDate);
+            //         window.intervalDate = null;
+            //     }
+            //     window.addEventListener("beforeunload", () => {
+            //         clearInterval(window.intervalDate);
+            //     });
+
+            //     var xhttp = new XMLHttpRequest();
+            //     xhttp.onreadystatechange = function() {
+            //         if(this.readyState == 4 && this.status == 200) {
+            //             document.getElementById("continut").innerHTML = this.responseText;
+            //             document.head.title = resursa;
+            //             if(resursa === "inregistreaza") {
+            //                 initForm();
+            //             }
+            //             if (jsFisier) {
+            //                 var elementScript = document.createElement('script');
+            //                 // elementScript.setAttribute("type", "module");
+            //                 elementScript.onload = function () {
+            //                     let functii = jsFunctie.split(' ');
+            //                     for(i in functii) {
+            //                         if (functii[i]) {
+            //                             window[functii[i]]();
+            //                         }
+            //                     }
+            //                 };
+            //                 elementScript.src = jsFisier;
+            //                 document.head.appendChild(elementScript);
+            //             } else {
+            //                 if(jsFunctie) {
+            //                     let functii = jsFunctie.split(' ');
+            //                     for(i in functii) {
+            //                         if (functii[i]) {
+            //                             window[functii[i]]();
+            //                         }
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+                
+            //     let resursa_html = resursa + '.html';
+            //     xhttp.open("GET", resursa_html, true);
+            //     xhttp.send();
+            // }
+            function schimbaContinut(resursa, jsFisier = '', jsFunctie = '') {
+                
+                if (window.intervalDate) {
+                    clearInterval(window.intervalDate);
+                    window.intervalDate = null;
+                }
+
+                const xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("continut").innerHTML = this.responseText;
+                        document.head.title = resursa;
+
+                        if (jsFisier) {
+                            if (!document.querySelector(`script[src="${jsFisier}"]`)) {
+                                const elementScript = document.createElement('script');
+                                elementScript.src = jsFisier;
+                                elementScript.onload = function () {
+                                    executaFunctii(jsFunctie);
+                                };
+                                document.head.appendChild(elementScript);
+                            } else {
+                                executaFunctii(jsFunctie);
+                            }
+                        } else {
+                            executaFunctii(jsFunctie);
+                        }
+                    }
+                };
+
+                const resursa_html = resursa + '.html';
+                xhttp.open("GET", resursa_html, true);
+                xhttp.send();
+            }
+
+            function executaFunctii(listaFunctii) {
+                if (!listaFunctii) return;
+
+                const functii = listaFunctii.split(' ');
+                for (const numeFunctie of functii) {
+                    if (numeFunctie && typeof window[numeFunctie] === "function") {
+                        try {
+                            window[numeFunctie]();
+                        } catch (eroare) {
+                            console.warn(`Eroare la apel functie: '${numeFunctie}':`, eroare);
+                        }
+                    } else if (numeFunctie) {
+                        console.warn(`Functia'${numeFunctie}' nu s-a definit.`);
+                    }
+                }
+            }
+            function initForm() {
+                const form = document.getElementById('formular-inregistrare');
+                const buton = document.getElementById('butonf');
+                const checkBox = document.getElementById('acordf');
+                
+                checkBox.addEventListener('change', () => {
+                    buton.disabled = !checkBox.checked;
+                });
+
+                form.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const dateFormular = {
+                        utilizator : document.getElementById('numeutilizatorf').value,
+                        nume: document.getElementById("numef").value,
+                        prenume: document.getElementById("prenumef").value,
+                        email: document.getElementById("emailf").value,
+                        parola: document.getElementById("parolaf").value,
+                        telefon: document.getElementById("telefonf").value,
+                        sex: document.getElementById("sexf").value,
+                        mancare_preferata: document.getElementById("mancarepreferatafm").value,
+                        culoare_preferata: document.getElementById("culoaref").value,
+                        data_nastere: document.getElementById("datanasteref").value,
+                        varsta: document.getElementById("varstaf").value,
+                        adresa_personala: document.getElementById("adresapersonalaf").value,
+                        descriere: document.getElementById("descrieref").value
+                    };
+
+
+                    fetch('/api/utilizatori', {
+                        method: "POST",
+                        headers: {
+                            "Content-Type" : "application/json"
+                        },
+                        body: JSON.stringify(dateFormular)
+                    })
+                    .then(response => JSON.parse(JSON.stringify(response)))
+                    .then(data => {
+                        alert(data);
+                        form.reset();
+                        buton.disabled = true;
+                    })
+                    .catch(error => {
+                        console.error('Eroare la trimiterea formularului: ', error);
+                        alert('A aparut o eroare. Verificati consola.')
+                    });
+                });
+            }
+       </script>
+    </head>
+    <body onload="schimbaContinut('acasa')">
+        <header>
+            <div class="show-menu"><img alt="menu" src="imagini/burger.png"></div>
+            <nav>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('acasa', '', '')"><img alt="home-icon" src="imagini/home-icon.webp" width="40" height="20" ></a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('inregistreaza', 'js/persoane.js', 'initForm')">Înregistrează</a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('video', '', '')">Video</a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('despre', '', '')">Despre</a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('desen', '', '')">Desen</a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('invat', 'js/script.js', 'loadIndex')">Învăț</a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('verifica', 'js/persoane.js', 'verificaPersoane')">Conectare</a>
+                <a class="a-nav" style="cursor: pointer;" onclick="schimbaContinut('cumparaturi', 'js/cumparaturi.js', 'initCumparaturi')">Cumparaturi</a>
+            </nav>
+        </header>
+
+        <main id="continut">
+        </main>
+
+        <hr>
+        
+        <footer>
+            <small>&copy;2025. Bejenaru Matei Andrei</small>
+        </footer>
+        <img class="cube-gif" alt="cube-image" src="imagini/cube-solving.gif">
+        <script src="js/script.js"></script>
+    </body>
+</html>

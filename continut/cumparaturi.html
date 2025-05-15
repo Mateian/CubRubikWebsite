@@ -1,0 +1,26 @@
+<div class="info-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1>Cumpărături</h1>
+    <select style="width:50%" name="cumparaturi-save-data-type" id="cumparaturi-save-data-type">
+        <option value="local">Local Storage</option>
+        <option value="db">IndexedDB</option>
+    </select> 
+    <form>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <label for="cumparaturi-input-text-nume">Nume produs</label><br>
+                <input type="text" id="cumparaturi-input-text-nume" placeholder="Nume"><br>
+                <label for="cumparaturi-input-number-cantitate">Cantitate</label><br>
+                <input type="cantitate" id="cumparaturi-input-number-cantitate" placeholder="Cantitate">
+            </div>
+            <div>
+                <input onclick="buttonEvent()" type="button" id="cumparaturi-input-button" value="Adaugă" style="width:100%; padding: 10px;">
+            </div>
+        </div>
+    </form>
+    <table id="cumparaturi-table">
+        <tr>
+            <th>Nume</th>
+            <th>cantitate</th>
+        </tr>
+    </table>
+</div>

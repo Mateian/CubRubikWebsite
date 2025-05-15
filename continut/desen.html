@@ -1,0 +1,64 @@
+<div class="info-container">
+    <svg width="600" height="600">
+        <!-- Sus -->
+        <rect x="10" y="10" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="70" y="10" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="130" y="10" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="10" y="70" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="70" y="70" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="130" y="70" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="10" y="130" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="70" y="130" width="50" height="50" fill="blue" stroke="black" />
+        <rect x="130" y="130" width="50" height="50" fill="blue" stroke="black" />
+        
+        <!-- Dreapta -->
+        <polygon points="190,10 215,35 215,85 190,60" fill="orange" stroke="black" />
+        <polygon points="190,70 215,95 215,145 190,120" fill="orange" stroke="black" />
+        <polygon points="190,130 215,155 215,205 190,180" fill="orange" stroke="black" />
+        <polygon points="220,35 245,60 245,110 220,85" fill="orange" stroke="black" />
+        <polygon points="220,95 245,120 245,170 220,145" fill="orange" stroke="black" />
+        <polygon points="220,155 245,180 245,230 220,205" fill="orange" stroke="black" />
+        <polygon points="250,60 275,85 275,135 250,110" fill="orange" stroke="black" />
+        <polygon points="250,120 275,145 275,195 250,170" fill="orange" stroke="black" />
+        <polygon points="250,180 275,205 275,255 250,230" fill="orange" stroke="black" />
+    
+        <!-- Jos -->
+        <polygon points="10,190 60,190 85,215 35,215" fill="yellow" stroke="black" />
+        <polygon points="70,190 120,190 145,215 95,215" fill="yellow" stroke="black" />
+        <polygon points="130,190 180,190 205,215 155,215" fill="yellow" stroke="black" />
+        <polygon points="40,220 90,220 115,245 65,245" fill="yellow" stroke="black" />
+        <polygon points="100,220 150,220 175,245 125,245" fill="yellow" stroke="black" />
+        <polygon points="160,220 210,220 235,245 185,245" fill="yellow" stroke="black" />
+        <polygon points="70,250 120,250 145,275 95,275" fill="yellow" stroke="black" />
+        <polygon points="130,250 180,250 205,275 155,275" fill="yellow" stroke="black" />
+        <polygon points="190,250 240,250 265,275 215,275" fill="yellow" stroke="black" />
+    
+        <polygon points="399,400 421,400 410,412" fill="red" />
+        <circle cx="405" cy="400" r="6" fill="red" />
+        <circle cx="415" cy="400" r="6" fill="red" />
+        <circle cx="350" cy="350" r="40" fill="red" />
+        <polygon points="100,300 130,300 115,315" fill="green"/>
+        <rect x="65" y="325" width="100" height="50" fill="pink" />
+        <text class="rotating-rect" x="85" y="355" fill="#000000" font-size="20" font-family="Arial">CUBIK</text>
+        <defs>
+            <linearGradient id="gradient1">
+                <stop offset="0%" stop-color="blue" />
+                <stop offset="100%" stop-color="purple" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="130" cy="410" rx="20" ry="15" fill="url(#gradient1)" />
+        <rect x="65" y="460" width="100" height="100" style="fill:blue">
+            <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" />
+        </rect>
+        <g transform="translate(100,150)">
+            <text fill="white" id="TextElement" x="0" y="0" font-family="Consolas">
+                Rubik's Cube
+            <animateMotion path="M 100 100 L 200 200" dur="5s" fill="freeze" />
+            </text>
+        </g>
+    </svg>
+    <div class="rotating-rect" style="height:200px;width:200px;background-color: green; margin-left: 100px; margin-bottom:50px; margin-top:50px;">
+        WOOOWOOOO
+    </div>
+    <div class="color-change-rect"></div>
+</div>

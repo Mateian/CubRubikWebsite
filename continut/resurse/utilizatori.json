@@ -1,0 +1,32 @@
+[
+    {
+        "utilizator": "matei",
+        "nume": "matei",
+        "prenume": "matei",
+        "email": "matei@matei.com",
+        "parola": "matei",
+        "telefon": "matei",
+        "sex": "male",
+        "mancare_preferata": "matei",
+        "culoare_preferata": "#770909",
+        "data_nastere": "2000-03-03",
+        "varsta": "23",
+        "adresa_personala": "http://localhost",
+        "descriere": "matei"
+    },
+    {
+        "utilizator": "z",
+        "nume": "z",
+        "prenume": "z",
+        "email": "",
+        "parola": "z",
+        "telefon": "z",
+        "sex": "male",
+        "mancare_preferata": "",
+        "culoare_preferata": "#000000",
+        "data_nastere": "",
+        "varsta": "50",
+        "adresa_personala": "",
+        "descriere": ""
+    }
+]

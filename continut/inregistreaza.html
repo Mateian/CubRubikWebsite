@@ -1,0 +1,49 @@
+<div class="info-container">
+    <form id="formular-inregistrare">
+        <fieldset>
+            <legend>Informații generale</legend>
+            <label for="numeutilizatorf">Nume utilizator:</label><br>
+            <input type="text" id="numeutilizatorf" name="numeutilizatorf"><br>
+            <label for="numef">Nume:</label><br>
+            <input type="text" id="numef" name="numef"><br>
+            <label for="prenumef">Prenume:</label><br>
+            <input type="text" id="prenumef" name="prenumef"><br>
+            <label for="parolaf">E-Mail:</label><br>
+            <input type="email" id="emailf" name="emailf"><br>
+            <label for="parolaf">Parolă:</label><br>
+            <input type="password" id="parolaf" name="parolaf"><br>
+            <label for="telefonf">Telefon:</label><br>
+            <input type="tel" id="telefonf" name="telefonf"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Informații personale</legend>
+            <label for="sexf">Sex:</label><br>
+            <select name="sexf" id="sexf">
+                <optgroup label="Sex">
+                    <option value="male">Bărbat</option>
+                    <option value="female">Femeie</option>
+                </optgroup>
+            </select> <br>
+            <label for="mancarepreferatafm">Mâncarea preferată:</label><br>
+            <input list="mancarepreferataf" name="mancarepreferatafm" id="mancarepreferatafm"><br>
+            <datalist id="mancarepreferataf">
+                <option value="Pizza">
+                <option value="Somon">
+                <option value="Piept de pui">
+            </datalist>
+            <label for="culoaref">Culoarea preferată:</label><br>
+            <input type="color" id="culoaref" name="culoaref"><br>
+            <label for="datanasteref">Dată naștere:</label><br>
+            <input type="date" id="datanasteref" name="datanasteref"><br>
+            <label for="varstaf">Vârstă:</label><br>
+            <input type="range" id="varstaf" name="varstaf"><br>
+            <label for="adresapersonalaf">Adresa paginii personale:</label><br>
+            <input type="url" id="adresapersonalaf" name="adresapersonalaf"><br>
+            <label for="descrieref">Descriere:</label><br>
+            <textarea id="descrieref" name="descrieref" rows="2" cols="20"></textarea><br>
+        </fieldset>
+        <input type="checkbox" id="acordf" name="acordf">
+        <label for="acordf">Sunt de acord cu <a href="resurse/conditii.txt">condițiile</a>.</label><br>
+        <button onclick="initForm" class="butonf" id="butonf" name="butonf" disabled style="margin-top: 20px;">Înregistrează</button>
+    </form>
+</div>

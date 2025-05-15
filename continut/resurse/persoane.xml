@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE persoane SYSTEM "persoane.dtd">
+<persoane>
+    <persoana id="1">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>23</varsta>
+        <Birou>
+            <strada>Strada Nationala</strada>
+            <numar>16</numar>
+            <localitate>Botosani</localitate>
+            <judet>Botosani</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>PopescuIon@email.com</email>
+            <telefon>0712345678</telefon>
+        </contact>
+        <Ocupatie>Student</Ocupatie>
+    </persoana>
+
+    <persoana id="2">
+        <nume>George</nume>
+        <prenume>Grigore</prenume>
+        <varsta>21</varsta>
+        <Birou>
+            <strada>Strada Lalelelor</strada>
+            <numar>564</numar>
+            <localitate>Vaslui</localitate>
+            <judet>Vaslui</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>GeorgicaGrig@email.com</email>
+            <telefon>0712345679</telefon>
+        </contact>
+        <Ocupatie>Programator</Ocupatie>
+    </persoana>
+
+    <persoana id="3">
+        <nume>Caldare</nume>
+        <prenume>Cristian</prenume>
+        <varsta>25</varsta>
+        <Birou>
+            <strada>Strada Opusului</strada>
+            <numar>1</numar>
+            <localitate>Pesaro</localitate>
+            <judet>PU</judet>
+            <tara>Italia</tara>
+        </Birou>
+        <contact>
+            <email>cristi_cald@email.com</email>
+            <telefon>0372345628</telefon>
+        </contact>
+        <Ocupatie>Electrician</Ocupatie>
+    </persoana>
+
+    <persoana id="4">
+        <nume>Marin</nume>
+        <prenume>Elena</prenume>
+        <varsta>29</varsta>
+        <Birou>
+            <strada>Strada Libertatii</strada>
+            <numar>45</numar>
+            <localitate>Ploiesti</localitate>
+            <judet>Prahova</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>elena.marin@email.com</email>
+            <telefon>0723344556</telefon>
+        </contact>
+        <Ocupatie>Designer</Ocupatie>
+    </persoana>
+
+    <persoana id="5">
+        <nume>Ionescu</nume>
+        <prenume>Alexandru</prenume>
+        <varsta>31</varsta>
+        <Birou>
+            <strada>Strada Zorilor</strada>
+            <numar>101</numar>
+            <localitate>Cluj-Napoca</localitate>
+            <judet>Cluj</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>alex.io@email.com</email>
+            <telefon>0744123456</telefon>
+        </contact>
+        <Ocupatie>Medic</Ocupatie>
+    </persoana>
+
+    <persoana id="6">
+        <nume>Dumitru</nume>
+        <prenume>Larisa</prenume>
+        <varsta>27</varsta>
+        <Birou>
+            <strada>Aleea Florilor</strada>
+            <numar>9</numar>
+            <localitate>Constanta</localitate>
+            <judet>Constanta</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>larisa_d@email.com</email>
+            <telefon>0765456789</telefon>
+        </contact>
+        <Ocupatie>Farmacist</Ocupatie>
+    </persoana>
+
+    <persoana id="7">
+        <nume>Radu</nume>
+        <prenume>Daniel</prenume>
+        <varsta>34</varsta>
+        <Birou>
+            <strada>Strada Constructorilor</strada>
+            <numar>77</numar>
+            <localitate>Oradea</localitate>
+            <judet>Bihor</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>daniel.radu@email.com</email>
+            <telefon>0789456123</telefon>
+        </contact>
+        <Ocupatie>Inginer</Ocupatie>
+    </persoana>
+
+    <persoana id="8">
+        <nume>Neagu</nume>
+        <prenume>Simona</prenume>
+        <varsta>38</varsta>
+        <Birou>
+            <strada>Strada Victoriei</strada>
+            <numar>11</numar>
+            <localitate>Bucuresti</localitate>
+            <judet>Ilfov</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>s.neagu@email.com</email>
+            <telefon>0700123456</telefon>
+        </contact>
+        <Ocupatie>Manager</Ocupatie>
+    </persoana>
+
+    <persoana id="9">
+        <nume>Andreescu</nume>
+        <prenume>Robert</prenume>
+        <varsta>30</varsta>
+        <Birou>
+            <strada>Calea Dorobantilor</strada>
+            <numar>220</numar>
+            <localitate>Timisoara</localitate>
+            <judet>Timis</judet>
+            <tara>Romania</tara>
+        </Birou>
+        <contact>
+            <email>andreescu.robert@email.com</email>
+            <telefon>0733001122</telefon>
+        </contact>
+        <Ocupatie>Profesor</Ocupatie>
+    </persoana>
+</persoane>

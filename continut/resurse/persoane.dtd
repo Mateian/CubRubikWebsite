@@ -1,0 +1,16 @@
+<!ELEMENT persoane (persoana+)>
+<!ELEMENT persoana (nume, prenume, varsta, Birou, contact, Ocupatie)>
+<!ELEMENT nume (#PCDATA)>
+<!ELEMENT prenume (#PCDATA)>
+<!ELEMENT varsta (#PCDATA)>
+<!ELEMENT Birou (strada, numar, localitate, judet, tara)>
+<!ELEMENT contact (email, telefon)>
+<!ELEMENT Ocupatie (#PCDATA)>
+<!ELEMENT strada (#PCDATA)>
+<!ELEMENT numar (#PCDATA)>
+<!ELEMENT localitate (#PCDATA)>
+<!ELEMENT judet (#PCDATA)>
+<!ELEMENT tara (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>
+<!ATTLIST persoana id CDATA "0">

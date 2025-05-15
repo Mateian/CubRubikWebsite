@@ -1,0 +1,63 @@
+<aside>
+    <a href="#sectiune1">Sectiune 1</a>
+    <a href="#sectiune2">Sectiune 2</a>
+    <a href="#sectiune3">Sectiune 3</a>
+</aside>
+<div class="info-container">
+    <div id="sectiune1">
+        <h1>Secțiunea 1</h1>
+        <h2>Informații</h2>
+        <p id="invat-date"></p>
+        <p id="invat-url"></p>
+        <p id="invat-browser"></p>
+        <p id="invat-locatie"></p>
+        <p id="invat-platforma"></p>
+    </div>
+    <div id="sectiune2">
+        <h1>Secțiunea 2</h1>
+        <h2>Desen</h2>
+        
+        <label for="invat-culoare-stroke">Culoare contur:</label>
+        <input type="color" id="invat-culoare-stroke", value="#000000"><br>
+
+        <label for="invat-culoare-fill">Culoare umplere:</label>
+        <input type="color" id="invat-culoare-fill" value="#00ff00"><br>
+
+        <canvas id="invat-desen-canvas" width="500" height="500" style="border: 2px dashed purple; cursor: crosshair; background-color: white; border-radius: 25px;"></canvas>
+    </div>
+    <div id="sectiune3">
+        <h1>Secțiunea 3</h1>
+        <h2>Tabel</h2>
+
+        <small>Trebuie introduse linii/coloane noi. Un exemplu de text pentru introducere:</small><hr>
+        <small>2::= Denumire, Preț; a-link Link Site; img-link Link imagine --- Inserare după linia 2</small><br><br>
+        <small><b>Exemplu de testat</b><br>2::= Google; 50,00 RON; a-link https://www.google.com/; img-link imagini/google_logo.jpg</small><hr>
+        <small>3::= Denumire Coloană; Data1; Data2;... --- Inserare după coloana 3</small><br><br>
+        <small><b>Exemplu de testat</b><br>3::= Descriere; Cub Rubik</small><hr>
+        <small>Se selectează culoarea și se apasa pe butonul dorit de introdus.</small> <br><br>
+
+        <div class="controale">
+            <label for="invat-text-tabela">Inserare tabel: </label> <br>
+            <input type="text" id="invat-text-tabela">
+            <input type="color" id="invat-culoare-element-tabel" value="#000000">
+            <input onclick="addColumn()" type="button" id="invat-buton-coloana" value="Introduceți o coloană">
+            <input onclick="addRow()" type="button" id="invat-buton-linie" value="Introduceți o linie">
+        </div>
+
+        <table id="invat-tabel">
+            <tr id="invat-tabel-headers">
+                <th>Denumire</th>
+                <th>Pret</th>
+                <th>Site</th>
+                <th>Imagine</th>
+            </tr>
+            <tr>
+                <td>Cub Magic 3x3x3 magnetic</td>
+                <td>45,00 RON</td>
+                <td><a href="https://www.aden.ro/reducerile-lunii/cub-magic-3x3x3-magnetic-stickerless-260cub-1.html?gad_source=1&gclid=Cj0KCQjwkN--BhDkARIsAD_mnIpoYnmS7gINgSRP8-jkouZkYNLObGKkl_T2Mv1yfxWWr0xwpjwDWgMaAqPLEALw_wcB">Site</a></td>
+                <td><img class="cube-picture-shop" alt="cub 1" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTC4flAgraWKeQi7NPpRZcybxEzlkmUtvqYZwxGYfEM9k4nk85VmTyd8KLLog1H_pZub83c3qWiaLXwBBAERkSqeuUMsWF6tl-k0HdyUrYJI8ls-Qi1A4KeGqfGj2k8LmjzT0pAx68AGw&usqp=CAc"</td>
+            </tr>
+        </table>
+        
+    </div>
+</div>
